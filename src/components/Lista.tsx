@@ -80,7 +80,7 @@ export function Lista() {
                                         <td>{item.correco}</td>
                                         <td>{item.sueldo}</td>
                                         <td>
-                                            <Link className="btn btn-primary mb-3" to={`/editarempleado/${item.idEmpleado}`} >Ediatr</Link>
+                                            <Link className="btn btn-primary me-3  " to={`/editarempleado/${item.idEmpleado}`} >Ediatr</Link>
                                             <Button className="btn btn-danger" onClick={() => { Eliminar(item.idEmpleado!) }}>Eliminar</Button>
 
                                         </td>
