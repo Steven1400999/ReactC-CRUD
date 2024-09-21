@@ -5,8 +5,7 @@ import { Col, Container, FormGroup, Label, Row } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 import { appsettings } from "../settings/appsettings";
 import Swal from "sweetalert2";
-
-
+import   './estilos.css';
 
 const initialEmpleado = {
     nombre: "",
@@ -65,32 +64,34 @@ export function NuevoEmpleado() {
 
 
     return (
-        <Container className="mt-5">
+        <Container className="mt-2">
             <Row>
                 <Col sm={{ size: 8, offset: 2 }}>
-                    <h4>Nuevo empleado</h4>
+                    <h4 className="text-center">Nuevo empleado</h4>
                     <hr />
+                    <div className="d-flex justify-content-center" >
                     <Form>
                         <FormGroup>
-                            <Label>Nombre</Label>
-                            <input type="text" name="nombre" onChange={inputChangeValue} value={empleado.nombre} />
+                            <Label className="me-2">Nombre</Label>
+                            <input type="text" name="nombre" className="custom-input"  onChange={inputChangeValue} value={empleado.nombre} />
                         </FormGroup>
 
                         <FormGroup>
-                            <Label>Correo</Label>
-                            <input type="text" name="correco" onChange={inputChangeValue} value={empleado.correco} />
+                            <Label className="me-2">Correo</Label>
+                            <input type="text" name="correco" className="custom-input" onChange={inputChangeValue} value={empleado.correco} />
                         </FormGroup>
 
                         <FormGroup>
-                            <Label>Sueldo</Label>
-                            <input type="number" name="sueldo" onChange={inputChangeValue} value={empleado.sueldo} />
+                            <Label className="me-2">Sueldo </Label>
+                            <input type="number" name="sueldo" className="custom-input" onChange={inputChangeValue} value={empleado.sueldo} />
                         </FormGroup>
 
                     </Form>
+                    </div>
 
                     <Button color="primary" className="me-4" onClick={guardar}>Guardar</Button>
 
-                    <Button color="secondary" onClick={volver}>Volver</Button>
+                    <Button color="outline-secondary" onClick={volver}>Volver</Button>
 
                 </Col>
 

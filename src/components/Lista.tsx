@@ -53,17 +53,18 @@ export function Lista() {
 
 
     return (
-        <Container className="mt-5">
+        <Container className="mt-2" >
             <Row>
                 <Col sm={{ size: 8, offset: 2 }}>
-                    <h4>Lista de empleados</h4>
+                    <h4 className="text-center" >Lista de empleados</h4>
                     <hr />
-                    <Link className="btn btn-success mb-3" to="/nuevoempleado" >Nuevo Empleado</Link>
+                    <div className="d-flex justify-content-center" >
+                        <Link className="btn btn-success btn-lg mb-3 " to="/nuevoempleado" >Nuevo Empleado</Link>
+                    </div>
 
 
-
-                    <Table bordered>
-                        <thead>
+                    <Table bordered striped hover responsive >
+                        <thead className="table-dark">
                             <tr>
                                 <th>Nombre</th>
                                 <th>Correo</th>
@@ -80,8 +81,8 @@ export function Lista() {
                                         <td>{item.correco}</td>
                                         <td>{item.sueldo}</td>
                                         <td>
-                                            <Link className="btn btn-primary me-3  " to={`/editarempleado/${item.idEmpleado}`} >Ediatr</Link>
-                                            <Button className="btn btn-danger" onClick={() => { Eliminar(item.idEmpleado!) }}>Eliminar</Button>
+                                            <Link className="btn  btn-outline-primary  me-3  " to={`/editarempleado/${item.idEmpleado}`} >Editar</Link>
+                                            <Button  color="outline-danger" onClick={() => { Eliminar(item.idEmpleado!) }}>Eliminar</Button>
 
                                         </td>
                                     </tr>
