@@ -78,7 +78,7 @@ export function Lista() {
                                 empleados.map((item) => (
                                     <tr key={item.idEmpleado}>
                                         <td>{item.nombre}</td>
-                                        <td>{item.correco}</td>
+                                        <td>{item.correo}</td>
                                         <td>{item.sueldo}</td>
                                         <td>
                                             <Link className="btn  btn-outline-primary  me-3  " to={`/editarempleado/${item.idEmpleado}`} >Editar</Link>

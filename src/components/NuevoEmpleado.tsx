@@ -9,7 +9,7 @@ import   './estilos.css';
 
 const initialEmpleado = {
     nombre: "",
-    correco: "",
+    correo: "",
     sueldo: 0
 }
 
@@ -78,7 +78,7 @@ export function NuevoEmpleado() {
 
                         <FormGroup>
                             <Label className="me-2">Correo</Label>
-                            <input type="text" name="correco" className="custom-input" onChange={inputChangeValue} value={empleado.correco} />
+                            <input type="text" name="correo" className="custom-input" onChange={inputChangeValue} value={empleado.correo} />
                         </FormGroup>
 
                         <FormGroup>
