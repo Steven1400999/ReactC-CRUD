@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react"
 import { IEmpleado } from "../interfaces/IEmpleado"
-import { Button, Form } from "reactstrap"
+import { Button, Collapse, Form, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from "reactstrap"
 import { Col, Container, FormGroup, Label, Row } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 import { appsettings } from "../settings/appsettings";
@@ -62,13 +62,36 @@ export function NuevoEmpleado() {
 
     }
 
+    const [collapsed, setCollapsed] = useState(true);
 
+    const toggleNavbar = () => setCollapsed(!collapsed);
+    
     return (
         <Container className="mt-2">
+             <div>
+            <Navbar color="faded" light >
+                <NavbarBrand href="/" className="me-auto">
+                Gestión de empleados
+                </NavbarBrand>
+                <NavbarToggler onClick={toggleNavbar} className="me-2" />
+                <Collapse isOpen={!collapsed} navbar>
+                    <Nav navbar>
+                        <NavItem>
+                            <NavLink href="/">Inicio</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="/nuevoempleado">
+                                Nuevo Empleado
+                            </NavLink>
+                        </NavItem>
+                    </Nav>
+                </Collapse>
+            </Navbar>
+            </div>
             <Row>
                 <Col sm={{ size: 8, offset: 2 }}>
                     <h4 className="text-center">Nuevo empleado</h4>
-                    <hr />
+                    <hr className="hr1" />
                     <div className="d-flex justify-content-center" >
                     <Form>
                         <FormGroup>

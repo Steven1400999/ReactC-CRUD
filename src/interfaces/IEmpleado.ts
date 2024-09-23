@@ -2,7 +2,11 @@ export interface IEmpleado {
 
     idEmpleado?: number,
     nombre: string,
-    correco: string,
-    sueldo:number
-
+    correo: string,
+    sueldo:number,
+    idEmpresa: number;
+    idEmpresaNavigation?: {
+        idEmpresa: number;
+        nombre: string;
+    };
 }

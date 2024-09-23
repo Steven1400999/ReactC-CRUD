@@ -6,10 +6,11 @@
 
 
 
-hr{
+.hr1{
     border: 0;
     height: 2%; /* Cambia el grosor de la línea */
     background-color: #393440; /* Cambia el color de la línea */
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
