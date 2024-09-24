@@ -60,17 +60,22 @@ export function Lista() {
             <div>
             <Navbar color="faded" light >
                 <NavbarBrand href="/" className="me-auto">
-                Gestión de empleados
+               <strong>Gestión de empleados</strong>
                 </NavbarBrand>
                 <NavbarToggler onClick={toggleNavbar} className="me-2" />
                 <Collapse isOpen={!collapsed} navbar>
-                    <Nav navbar>
-                        <NavItem>
+                    <Nav navbar >
+                        <NavItem className="me-auto">
                             <NavLink href="/">Inicio</NavLink>
                         </NavItem>
-                        <NavItem>
+                        <NavItem className="me-auto">
                             <NavLink href="/nuevoempleado">
                                 Nuevo Empleado
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="me-auto">
+                            <NavLink href="/grafica">
+                                Gráfica de Sueldos
                             </NavLink>
                         </NavItem>
                     </Nav>
